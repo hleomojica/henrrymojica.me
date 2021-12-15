@@ -1,0 +1,301 @@
+@import "../../styles/app";
+
+.app-header.navbar {
+  background-color: $inverse;
+  height: $navbar-height;
+  z-index: 100;
+  padding: 0 1.85rem 0;
+  background: var(--navbar-bg);
+  box-shadow: var(--navbar-shadow);
+  transition: $transition-base;
+  border: none;
+  font-weight: 100;
+  justify-content: flex-start;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  .nav {
+    height: 100%;
+    padding: 0;
+
+    .nav-item {
+      .nav-link,
+      .nav-link > a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        padding: 0.5rem;
+        color: $navbar-link-color;
+        font-size: 1.5rem;
+
+        @include hover {
+          color: $navbar-link-hover-color;
+          background: $navbar-link-hover-bg;
+          text-decoration: none;
+        }
+
+        .la {
+          font-size: 20px;
+
+          @include media-breakpoint-down(sm) {
+            font-size: 27px;
+          }
+        }
+        .fa {
+          color: $goldens;
+        }
+      }
+    }
+  }
+
+  &.header-dark {
+    .nav {
+      .nav-item {
+        .nav-link,
+        .nav-link > a {
+          color: $white;
+
+          @include hover {
+            color: rgba($white, 0.7);
+          }
+        }
+      }
+    }
+
+    .input-group-text {
+      color: $white;
+    }
+
+    input::placeholder {
+      color: rgba($white, 0.7);
+    }
+
+    .navbarBrand {
+      color: $white;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0 $spacer/2;
+  }
+
+  &.navbar-floating-type {
+    margin: $spacer $content-padding 0;
+    border-radius: $border-radius;
+
+    @media (max-width: breakpoint-max(sm)) {
+      margin-left: $content-padding-sm;
+      margin-right: $content-padding-sm;
+    }
+  }
+
+  .form-group {
+    width: 300px;
+    input {
+      background-color: #f9fafe;
+      &::placeholder {
+        color: #4a5056;
+        font-weight: $font-weight-normal;
+      }
+    }
+    .input-group-prepend {
+      margin-right: 0;
+    }
+
+    .input-group-text {
+      border: none;
+      background-color: #f9fafe !important;
+      transition: background-color ease-in-out 0.15s;
+    }
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 40px;
+    width: 40px;
+    background: #ffc247;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .avatar-badge {
+    background-color: #0d2b47;
+  }
+
+  .navbarBrand {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    pointer-events: none;
+
+    i {
+      font-size: 10px;
+    }
+  }
+
+  .notificationsMenu {
+    .dropdown-menu {
+      left: auto !important;
+      right: 0 !important;
+      top: $navbar-height !important;
+    }
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .settingsDropdown {
+    .dropdown-item:focus {
+      outline: none;
+    }
+    ul {
+      width: 12rem;
+      li {
+        padding: 4px 0;
+      }
+    }
+  }
+}
+
+.headertex {
+  pointer-events: none;
+  color: $goldens;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 160;
+  letter-spacing: -1px;
+  .menu {
+    font-size: 2rem;
+    font-weight: 250;
+  }
+  @media (max-width: breakpoint-max(sm)) {
+    font-size: 1.5rem;
+  }
+}
+
+// SOCIAL MEDIA BUTTONS
+//variables -- Social
+$basic-dark-color: #212121;
+$basic-light-color: #fff;
+$fb-color: #3b5998;
+$tw-color: #00aced;
+$g-plus: #dd4b39;
+$github: #050505;
+$pinterest: #cb2027;
+$insta: #ea708f;
+$in: #007bb6;
+$vimeo: #1ab7ea;
+$border-radius: 10px;
+$font-size: 20px;
+
+.effect {
+  width: 100%;
+  background-color: $inverse;
+
+  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @media (max-width: breakpoint-max(sm)) {
+
+   // background-color: $body-bg;
+  }
+
+
+}
+
+.effect {
+  display: flex;
+
+  a {
+    text-decoration: none !important;
+    color: $basic-light-color;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius;
+    font-size: $font-size;
+    overflow: hidden;
+    position: relative;
+    margin: 0.25rem;
+    padding-top: 0.2rem;
+    i {
+      position: relative;
+      //z-index: 3;
+      
+    }
+    @media (max-width: breakpoint-max(sm)) {
+      margin: 0.1rem;
+      width: 2rem;
+      height: 2rem;
+      font-size: 1.5rem;
+    }
+
+    &.fb {
+      background-color: $fb-color;
+    }
+
+    &.tw {
+      background-color: $tw-color;
+    }
+
+    &.github {
+      background-color: $github;
+    }
+
+    &.insta {
+      background-color: $insta;
+    }
+
+    &.in {
+      background-color: $in;
+    }
+  }
+}
+
+/* egeon effect */
+.effect.egeon {
+  a {
+    transition: transform 0.2s linear 0s, border-radius 0.2s linear 0.2s;
+    i {
+      transition: transform 0.2s linear 0s;
+    }
+    &:hover {
+      transform: rotate(-180deg);
+      //border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      border-bottom-left-radius: 50%;
+      color: #fff;
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.logo-tech {
+  vertical-align: middle;
+  margin-right: 6px;
+  width: 40px;
+  height: 40px;
+}

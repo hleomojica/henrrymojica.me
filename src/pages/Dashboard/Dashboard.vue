@@ -19,7 +19,7 @@
           title="<h5>Recent  <span class='fw-semi-bold'>Projects</span></h5>"
           customHeader
         >
-        <Projects/>
+        <ProjectList/>
 
 
         </Widget>
@@ -36,7 +36,9 @@ import mock from "./mock";
 import { Chart } from "highcharts-vue";
 import Card from "@/components/Card/Card";
 import Skills from "@/components/Skills/Skills";
-import Projects from "@/components/Projects/Project";
+
+
+import ProjectList from "@/components/Projects/ProjectList";
 
 export default {
   name: "Dashboard",
@@ -46,7 +48,7 @@ export default {
     highcharts: Chart,
     Card,
     Skills,
-    Projects
+    ProjectList
   },
   data() {
     return {

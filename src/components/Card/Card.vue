@@ -17,8 +17,10 @@
           </div>
         </b-col>
         <b-col md="12" lg="12" sm="12">
-          <b-button class="mt-1 btn-name" v-b-toggle.my-collapse> HENRRY MOJICA </b-button>
-          <b-collapse id="my-collapse">
+          <b-button class="mt-1 btn-name" v-b-toggle.my-collapse>
+            HENRRY MOJICA
+          </b-button>
+          <b-collapse visible id="my-collapse">
             <b-card-body>
               <b-card-sub-title class="mb-2">
                 <h5>Full Stack Software developer</h5>
@@ -49,8 +51,15 @@ export default {
       return Math.floor(Math.random() * 100);
     },
   },
-  mounted() {},
-  methods: {},
+  mounted() {
+    this.callCollapse();
+  },
+  methods: {
+    callCollapse() {
+      setTimeout(()=>{this.$root.$emit("bv::toggle::collapse", "my-collapse")},5000)
+      
+    },
+  },
 };
 </script>
 

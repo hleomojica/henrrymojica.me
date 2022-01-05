@@ -1,31 +1,31 @@
 <template>
   <b-row>
     <!-- Project 1  -->
-    <b-col md="4" sm="12">
+    
+    <b-col md="12" sm="12">
       <b-card
-        border-variant="default"
+        border-variant="inverse"
         header="Opem S.A"
-        header-bg-variant="secondary"
-        header-text-variant="white"
+        header-bg-variant="inverse"
+        header-text-variant="goldens"
         align="center"
         title="OPEM"
         tag="article"
         style="max-width: auto"
         class="mb-5 mt-2"
       >
-        <br />
-        <b-card-text>
-          Here's a blank template to get started: To avoid retyping too much
-          info. Do a search and replace with your text editor for the following
+        <b-card-img class="mb-2" src="../../assets/dev2.svg" alt="cat"></b-card-img>
+        <b-card-text c>
+          Here brief description of the project
         </b-card-text>
         <b-list-group flush>
-          <b-list-group-item></b-list-group-item>
-
-          <b-list-group-item>
-            <b-icon-x-circle class="h5 mr-2 mb-0 mt-0"></b-icon-x-circle>Stack
+         
+          <b-list-group-item class="d-flex  justify-content-center">
+            <b-badge pill variant="secondary">NodeJs</b-badge>
+            <b-badge pill variant="secondary">VueJs</b-badge>
           </b-list-group-item>
           <b-list-group-item>
-            <b-icon-x-circle class="h5 mr-2 mb-0 mt-0"></b-icon-x-circle>Status
+           <b-badge pill variant="success">Deployed</b-badge>
           </b-list-group-item>
           <b-list-group-item>
             <b-icon-x-circle class="h5 mr-2 mb-0 mt-0"></b-icon-x-circle>Spotify
@@ -34,9 +34,10 @@
           <b-list-group-item></b-list-group-item>
         </b-list-group>
         <br />
-        <b-button v-b-modal.modal-2 variant="secondary">More info</b-button>
+        <b-button disabled v-b-modal.modal-2 variant="inverse">Demo</b-button>
         <br />
       </b-card>
     </b-col>
   </b-row>
 </template>
+<style src="./Project.scss" lang="scss"></style>

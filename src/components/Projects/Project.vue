@@ -2,20 +2,19 @@
   <b-row>
     <!-- Project 1  -->
     
-    <b-col md="12" sm="12">
+    <b-col md="12" sm="12" >
       <b-card
         border-variant="inverse"
         header="Opem S.A"
         header-bg-variant="inverse"
         header-text-variant="goldens"
         align="center"
-        title="OPEM"
         tag="article"
         style="max-width: auto"
-        class="mb-5 mt-2"
+        class="mb-5 mt-2 m-4"
       >
-        <b-card-img class="mb-2" src="../../assets/dev2.svg" alt="cat"></b-card-img>
-        <b-card-text c>
+        <b-card-img class="mb-2" src="../../../public/py-1.png" alt="cat"></b-card-img>
+        <b-card-text >
           Here brief description of the project
         </b-card-text>
         <b-list-group flush>
@@ -28,7 +27,7 @@
            <b-badge pill variant="success">Deployed</b-badge>
           </b-list-group-item>
           <b-list-group-item>
-            <b-icon-x-circle class="h5 mr-2 mb-0 mt-0"></b-icon-x-circle>Spotify
+            Spotify
             Family
           </b-list-group-item>
           <b-list-group-item></b-list-group-item>

@@ -1,11 +1,11 @@
 <template>
   <b-row>
     <!-- Project 1  -->
-    
-    <b-col md="12" sm="12" >
+
+    <b-col md="12" sm="12">
       <b-card
         border-variant="inverse"
-        header="Opem S.A"
+        :header="this.projectdata.name"
         header-bg-variant="inverse"
         header-text-variant="goldens"
         align="center"
@@ -13,23 +13,29 @@
         style="max-width: auto"
         class="mb-5 mt-2 m-4"
       >
-        <b-card-img class="mb-2" src="../../../public/py-1.png" alt="cat"></b-card-img>
-        <b-card-text >
-          Here brief description of the project
-        </b-card-text>
+        <b-card-img
+          class="mb-2"
+          :src="this.projectdata.img"
+          alt="cat"
+        ></b-card-img>
+        <b-card-text> {{ this.projectdata.description }} </b-card-text>
         <b-list-group flush>
-         
-          <b-list-group-item class="d-flex  justify-content-center">
-            <b-badge pill variant="secondary">NodeJs</b-badge>
+          <b-list-group-item>
+            <b-badge
+              pill
+              variant="secondary"
+              v-for="tech in this.projectdata.tech"
+              :key="tech"
+              >{{ tech }}</b-badge
+            >
             <b-badge pill variant="secondary">VueJs</b-badge>
           </b-list-group-item>
           <b-list-group-item>
-           <b-badge pill variant="success">Deployed</b-badge>
+            <b-badge pill variant="success">{{
+              this.projectdata.status
+            }}</b-badge>
           </b-list-group-item>
-          <b-list-group-item>
-            Spotify
-            Family
-          </b-list-group-item>
+
           <b-list-group-item></b-list-group-item>
         </b-list-group>
         <br />
@@ -39,4 +45,15 @@
     </b-col>
   </b-row>
 </template>
+<script>
+export default {
+  props: {
+    projectdata: { type: Object },
+  },
+  mounted() {
+    console.log(this.projectdata);
+  },
+};
+</script>
+
 <style src="./Project.scss" lang="scss"></style>

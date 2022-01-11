@@ -3,11 +3,9 @@
     <b-row>
       <b-col class="md-12">
         <VueSlickCarousel v-bind="settings">
-          <div><project></project></div>
-          <div><project></project></div>
-          <div><project></project></div>
-          <div><project></project></div>
-          <div><project></project></div>
+          <div v-for="project in projects" :key="project.id">
+            <project :projectdata=project></project>
+          </div>
         </VueSlickCarousel>
       </b-col>
     </b-row>
@@ -20,11 +18,13 @@ import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 // optional style for arrows & dots
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import { dataProjects } from "./data";
 
 export default {
   components: { Project, VueSlickCarousel },
   data() {
     return {
+      projects: dataProjects,
       settings: {
         dots: true,
         focusOnSelect: true,

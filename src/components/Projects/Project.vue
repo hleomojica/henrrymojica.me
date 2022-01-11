@@ -51,7 +51,7 @@ export default {
     projectdata: { type: Object },
   },
   mounted() {
-    console.log(this.projectdata);
+    //console.log(this.projectdata);
   },
 };
 </script>

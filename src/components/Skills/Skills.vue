@@ -217,7 +217,7 @@ export default {
       const href = event.target.getAttribute("href");
       const el = href ? document.querySelector(href) : null;
       if (el) {
-        console.log(el.offsetTop);
+        //console.log(el.offsetTop);
         this.$refs.content.scrollTop = el.offsetTop - 20;
       }
     },

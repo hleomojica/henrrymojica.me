@@ -24,13 +24,13 @@ const { mapState, mapActions } = createNamespacedHelpers('layout');
 import Sidebar from '@/components/Sidebar/Sidebar';
 import Header from '@/components/Header/Header';
 import Helper from '@/components/Helper/Helper';
-import BreadcrumbHistory from '@/components/BreadcrumbHistory/BreadcrumbHistory';
+
 
 import './Layout.scss';
 
 export default {
   name: 'Layout',
-  components: { Sidebar, Header, Helper, BreadcrumbHistory },
+  components: { Sidebar, Header, Helper },
   methods: {
     ...mapActions(['switchSidebar', 'handleSwipe', 'changeSidebarActive', 'toggleSidebar','toggleHelper'],
     ),

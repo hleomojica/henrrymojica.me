@@ -1,7 +1,7 @@
 <template>
 <div :class="[{root: true, sidebarClose, sidebarStatic}, 'sing-dashboard']">
   <Sidebar />
-<!-- <Helper /> -->
+
   <div class="wrap">
     <Header />
     

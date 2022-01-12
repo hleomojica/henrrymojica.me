@@ -19,10 +19,12 @@
     </b-nav>
 
     <b-sidebar id="sidebar-1" right shadow width="14rem">
-      <div class="px-3 py-2"></div>
+      <div class="px-3 py-2">
+        <router-link :to="{path:'/', hash: '#projectlist'}" >Home</router-link>
+      </div>
     </b-sidebar>
     <b-nav class="ml-auto">
-      <b-navbar-nav >
+      <b-navbar-nav>
         <div class="effect egeon">
           <div class="buttons w-100">
             <a
@@ -101,10 +103,9 @@
 <script>
 import { mapState, mapActions } from "vuex";
 
-
 export default {
   name: "Header",
-  components: { },
+  components: {},
   computed: {
     ...mapState("layout", ["sidebarClose", "sidebarStatic"]),
   },

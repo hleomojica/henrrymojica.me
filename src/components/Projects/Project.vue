@@ -39,7 +39,8 @@
           <b-list-group-item></b-list-group-item>
         </b-list-group>
         <br />
-        <b-button disabled v-b-modal.modal-2 variant="inverse">Demo</b-button>
+        <b-link :href="this.projectdata.link" target="_blank" class="btn btn-inverse">More</b-link>
+       
         <br />
       </b-card>
     </b-col>

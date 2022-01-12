@@ -1,13 +1,32 @@
 <template>
   <div class="dashboard-page">
-    
-
+    <Particles
+      id="tsparticles"
+      :options="{
+        fpsLimit: 60,
+        particles: {
+          color: {
+            value: '#000',
+          },
+          move: {
+            enable: true,
+          },
+          links: {
+            enable: true,
+            color: '#000',
+          },
+        },
+      }"
+    />
     <!-- skills section -->
     <b-row>
       <b-col md="12">
         <Widget>
           <!-- About Card -->
-          <Card />
+          <transition name="fade" appear>
+            <Card />
+          </transition>
+
           <Skills />
         </Widget>
       </b-col>
@@ -19,13 +38,10 @@
           title="<h5>Recent  <span class='fw-semi-bold'>Projects</span></h5>"
           customHeader
         >
-        <ProjectList/>
-
-
+          <ProjectList />
         </Widget>
       </b-col>
     </b-row>
-    
   </div>
 </template>
 
@@ -37,7 +53,6 @@ import { Chart } from "highcharts-vue";
 import Card from "@/components/Card/Card";
 import Skills from "@/components/Skills/Skills";
 
-
 import ProjectList from "@/components/Projects/ProjectList";
 
 export default {
@@ -48,11 +63,12 @@ export default {
     highcharts: Chart,
     Card,
     Skills,
-    ProjectList
+    ProjectList,
   },
   data() {
     return {
       mock,
+      show: true,
     };
   },
   methods: {

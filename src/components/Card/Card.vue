@@ -1,5 +1,6 @@
 <template>
   <div>
+    
     <b-card class="overflow-hidden text-center">
       <b-row no-gutters>
         <b-col
@@ -8,6 +9,7 @@
           sm="12"
           class="d-flex align-items-center justify-content-center"
         >
+        
           <div class="spin circle">
             <b-card-img
               src="../../assets/me2.jpeg"
@@ -15,6 +17,7 @@
               class="img-card img-fluid"
             ></b-card-img>
           </div>
+
         </b-col>
         <b-col md="12" lg="12" sm="12">
           <b-button class="mt-1 btn-name" v-b-toggle.my-collapse>
@@ -56,8 +59,9 @@ export default {
   },
   methods: {
     callCollapse() {
-      setTimeout(()=>{this.$root.$emit("bv::toggle::collapse", "my-collapse")},5000)
-      
+      setTimeout(() => {
+        this.$root.$emit("bv::toggle::collapse", "my-collapse");
+      }, 5000);
     },
   },
 };

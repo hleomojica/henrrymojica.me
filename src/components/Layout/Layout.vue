@@ -49,8 +49,10 @@ export default {
   created() {
     const staticSidebar = JSON.parse(localStorage.getItem('sidebarStatic'));
 
-    if (staticSidebar) {
-      this.$store.state.layout.sidebarStatic = true;
+    if (staticSidebar !== null) {
+      // Persist the exact stored value instead of forcing `true`
+      // so that a saved `false` correctly disables the static sidebar.
+      this.$store.state.layout.sidebarStatic = staticSidebar;
     } else if (!this.sidebarClose) {
       setTimeout(() => {
         this.switchSidebar(true);

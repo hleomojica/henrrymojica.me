@@ -10,7 +10,7 @@
           <a href="/" class="menu"> About me</a>
         </b-nav-item>
         <b-nav-item>
-          <a href="/" class="menu"> Proyects</a>
+          <a href="/" class="menu"> Projects</a>
         </b-nav-item>
         <b-nav-item>
           <a href="/" class="menu"> Extra</a>

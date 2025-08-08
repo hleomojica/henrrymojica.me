@@ -62,7 +62,7 @@
         </a>
       </span>
       <a v-if="close" href="#" @click="closeWidget($event)" :id="`closeId-${randomId}`">
-        <strong v-if="typeof refresh === 'string'" class="text-gray-light">{{close}}</strong>
+        <strong v-if="typeof close === 'string'" class="text-gray-light">{{close}}</strong>
         <i v-else class="la la-remove"></i>
         <b-tooltip
           v-if="showTooltip"
